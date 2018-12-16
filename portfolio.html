@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Added JS for navigaion menu to work on smaller screens! -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!-- ekko-lightbox effect -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="javascript/lightbox-builder.js"></script>
+    <script type="text/javascript" src="javascript/layout.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+
+    <title>Portfolio</title>
+</head>
+<body>
+
+        <!-- Nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <span class="navbar-brand text-white text-center my-Bg ml-5 pt-3 pb-3 pl-3 pr-3">Jesse Mihalik-Howard</span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav nav-right ml-auto mr-5">
+              <a class="nav-item nav-link" href="index.html">About <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link active" href="#">Portfolio</a>
+              <a class="nav-item nav-link" href="contact.html">Contact</a>
+            </div>
+          </div>
+      </nav>
+
+        <!-- Main content area; 1 Row 1 Column 2/3ds wide -->
+        <div class="container">
+            <section>
+              <div class="row">
+                <div class="col-12">
+                  <div class="row">
+        <!-- Portfolio content goes here -->
+                   <h2 class="title">Portfolio</h2>
+
+<!-- ekko-lightbox see; http://ashleydw.github.io/lightbox/#mixed-gallery -->
+<!-- <a class="card-img-top" href="imageURL" data-toggle="lightbox" data-gallery="galleryNAME" data-title="yourTITLE">
+    <img src="imageURL" class="img-fluid">
+</a>
+elements not showing, use data-remote
+<div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=264" data-title="Hidden item 1"></div>
+-->
+                                
+<!-- button bar for links -->
+<!-- <div class="btn-group" role="group">
+  <a href="" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a>
+  <a href="" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a>
+  <a href="" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a>
+</div> -->
+
+        <!-- Begin Bootstrap Card Deck -->
+                      <div class="card-deck">
+
+                        <!-- Top row -->
+                        <div class="row portfolioRow">
+                          <div class="col-lg-4">
+                            <a href="images/got-hanged.png" data-toggle="lightbox" data-gallery="hidden-images" data-title="GOT Hangman Game" data-footer="WARNING: may contain spoilers. A Game Of Thrones 8-bit themed version of Hangman using only HTML, CSS, Bootstrap and JavaScript.">
+                                <img class="card-img-top" src="images/got-hanged.png" class="img-fluid">
+                                <div class="btn-group" role="group">
+                                  <a href="https://github.com/Gamlilorien/got-hanged/blob/master/README.md" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a>
+                                  <a href="https://github.com/Gamlilorien/got-hanged/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a>
+                                  <a href="https://gamlilorien.github.io/got-hanged/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a>
+                                </div>
+                            </a>
+                            <!-- <a href="images/Asbestos-Job-Checklist-rsd.png" data-fancybox="gallery" data-caption="Designed for a local Asbestos Abatement company, this FileMaker® App is designed to run on iPhone for quick job checklist and finished PDF report generation."><img class="card-img-top" src="images/Asbestos-Job-Checklist-rsd.png" alt="Inspections Job Checklist app"/></a> -->
+                            <div class="card-body">
+                              <h5 class="card-title">GOT Hangman</h5>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4">
+                            <a href="images/hp-trivia.png" data-toggle="lightbox" data-gallery="hidden-images" data-title="HP Trivia Game" data-footer="A Harry Potter inspired trivia game built using timer events and DOM manulipation via Javascript and Jquery.">
+                                <img class="card-img-top" src="images/hp-trivia.png" class="img-fluid">
+                                <div class="btn-group" role="group">
+                                  <a href="https://github.com/Gamlilorien/trivia-game/blob/master/README.md" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a>
+                                  <a href="https://github.com/Gamlilorien/trivia-game/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a>
+                                  <a href="https://gamlilorien.github.io/trivia-game/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a>
+                                </div>
+                            </a>
+                            <!-- <a href="images/AdvanceCarwash.png" data-fancybox="gallery" data-caption="A responsive WordPress website redesign for local carwash equiptment retailer and supplier. The biggest challenge was designing easy navigation for their large number of products."><img class="card-img-top" src="images/AdvanceCarwash.png" alt="Website for Advance Carwash"/></a> -->
+                            <div class="card-body">
+                              <h5 class="card-title">HP Trivia Game</h5>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-4">
+                            <a href="images/crystal-collector.png" data-toggle="lightbox" data-gallery="hidden-images" data-title="Crystal Collector Game" data-footer="A random number guessing game built with Javascript and Jquery.">
+                                <img class="card-img-top" src="images/crystal-collector.png" class="img-fluid">
+                                <div class="btn-group" role="group">
+                                  <a href="https://github.com/Gamlilorien/crystal-game/blob/master/README.md" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a>
+                                  <a href="https://github.com/Gamlilorien/crystal-game/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a>
+                                  <a href="https://gamlilorien.github.io/crystal-game/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a>
+                                </div>
+                            </a>
+                            <!-- <a href="images/RPG-Character-Generator-rsd.png" data-fancybox="gallery" data-caption="A custom-built FileMaker® database for easy tabletop character generation. Designed with a sci-fi look, and built specifically for the Rifts RPG by Palladium Books®. "><img class="card-img-top" src="images/RPG-Character-Generator-rsd.png" alt="Tabletop RPG character generator"/></a> -->
+                            <div class="card-body">
+                              <h5 class="card-title">Crystal Collector</h5>
+                            </div>
+                          </div>
+                        <!-- </div> -->
+                        
+                        <!-- Second Row -->
+                        <!-- <div class="row portfolioRow"> -->
+                          <div class="col-lg-4">
+                              <a href="images/giphy-time.png" data-toggle="lightbox" data-gallery="hidden-images" data-title="Super Hero Giphy Time!" data-footer="A responsive gif search-app that uses the Giphy API to dynamicaly search for and display animated gif results.">
+                                <img class="card-img-top" src="images/giphy-time.png" class="img-fluid"/>
+                                <div class="btn-group" role="group">
+                                  <a href="https://github.com/Gamlilorien/giphy-time/blob/master/README.md" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a>
+                                  <a href="https://github.com/Gamlilorien/giphy-time/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a>
+                                  <a href="https://gamlilorien.github.io/giphy-time/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a>
+                                </div>
+                              </a>
+                              <!-- <img class="card-img-top" src="images/Admissions-&-Registration-rsd.png" alt="Admissions and Registration system for West River Acadamy"> -->
+                              <div class="card-body">
+                                <h5 class="card-title">Super Giphy Time!</h5>
+                              </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                              <a href="images/train-schedule.png" data-toggle="lightbox" data-gallery="hidden-images" data-title="Train Schedule" data-footer="A fictional Train Schedule that uses moment.js to calculate the current time and compare against trains that run on a set frequency of minutes. Also stores user input to Firebase database for multi-session continuity.">
+                                <img class="card-img-top" src="images/train-schedule.png"/>
+                                <div class="btn-group" role="group">
+                                  <a href="https://github.com/Gamlilorien/train-schedule/blob/master/README.md" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a>
+                                  <a href="https://github.com/Gamlilorien/train-schedule/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a>
+                                  <a href="https://gamlilorien.github.io/train-schedule/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a>
+                                </div>
+                              </a>
+                              <!-- <img class="card-img-top" src="images/Peaceful-Om-Intake-Start.png" alt="Spa intake form app for iPad"> -->
+                              <div class="card-body">
+                                <h5 class="card-title">Train Schedule</h5>
+                              </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                              <a href="images/trailblazer.png" data-toggle="lightbox" data-gallery="hidden-images" data-title="TrailBlazer Hiking App" data-footer="">
+                                <img class="card-img-top" src="images/trailblazer.png"/>
+                                <div class="btn-group" role="group">
+                                  <a href="https://github.com/Gamlilorien/project-1/blob/master/README.md" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a>
+                                  <a href="https://github.com/Gamlilorien/project-1" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a>
+                                  <a href="https://gamlilorien.github.io/project-1/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a>
+                                </div>
+                              </a>
+                              <!-- <img class="card-img-top" src="images/Inventory-QR-Codes-rsd.png" alt="Batch tracking and QR code generator FileMaker app for iPhone"> -->
+                              <div class="card-body">
+                                <h5 class="card-title">TrailBlazer App</h5>
+                              </div>
+                            </div>
+                        <!-- </div> -->
+
+                      </div>
+          <!-- End Bootstrap Card Deck -->
+
+                  </div>
+                </div>
+              </div>
+            </section>
+        </div>  -->
+
+        <footer>
+            Copywrite <span class="cYear"></span>
+        </footer>
+
+
+</body>
+</html>
