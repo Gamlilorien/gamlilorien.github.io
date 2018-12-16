@@ -1,2 +1,1 @@
-# portfolio
-A personal and professional portfolio
+# gamlilorien.github.io
