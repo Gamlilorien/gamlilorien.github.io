@@ -108,6 +108,11 @@ nav {
     border-radius: .3rem;
 }
 
+.colButtonBar {
+    padding-top: 1rem;
+    padding-left: 0px;
+}
+
 section {
     display: block;
     background-color: #ffffff;
@@ -134,6 +139,18 @@ footer {
 @media (min-width: 576px) {
     .card-columns {
         column-count: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .colTitle {
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+    
+    .colButtonBar {
+        border-bottom: 1px solid gray;
+        padding-left: 1rem;
     }
 }
 
