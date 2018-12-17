@@ -59,6 +59,45 @@ var input = [
 //** we want columns with no more than 3 items per row **
 
 
+/* <div class="btn-group portfolio-buttons" role="group">
+    <a href="https://github.com/Gamlilorien/got-hanged/blob/master/README.md" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a>
+    <a href="https://github.com/Gamlilorien/got-hanged/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a>
+    <a href="https://gamlilorien.github.io/got-hanged/" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a>
+</div> */
+
+//function to build buttonBar for portfolio items and dynamically add to modal card window
+//this function will be called by an ON CLICK event trigger
+var makeButtonBar = function(folderName) {
+    var readmeURL = "https://github.com/Gamlilorien/" +folderName +"/blob/master/README.md";
+    var gitURL = "https://github.com/Gamlilorien/" +folderName +"/";
+    var demoURL = "https://gamlilorien.github.io/" +folderName +"/";
+    // console.log(readmeURL +"\n" +gitURL +"\n" +demoURL)
+
+    //now build button bar
+    // buttonBar = $("<div>").attr({"class": "btn-group myBtn-bar", "role": "group"})
+    //         //button1
+    //         .append(
+    //             $("<a>").attr({"href": readmeURL, "target": "_blank", "role": "button", "class": "btn btn-dark", "data-toggle": "tooltip", "data-placement": "bottom", "title": "View Readme"}).html($("<i>").attr({"class": "fab fa-readme"}))
+    //         ) 
+
+    //         //button2
+    //         .append(
+    //             $("<a>").attr({"href": gitURL, "target": "_blank", "role": "button", "class": "btn btn-dark", "data-toggle": "tooltip", "data-placement": "bottom", "title": "View code on GitHub"}).html($("<i>").attr({"class": "fab fa-github-square"}))
+    //         ) 
+
+    //         //button3
+    //         .append(
+    //             $("<a>").attr({"href": demoURL, "target": "_blank", "role": "button", "class": "btn btn-dark", "data-toggle": "tooltip", "data-placement": "bottom", "title": "View Demo"}).html($("<i>").attr({"class": "fas fa-external-link-square-alt"}))
+    //         );
+    //had to update so it creates a string for easier use with ekko-lightbox.js
+    buttonBar = '<div class="btn-group portfolio-buttons" role="group"><a href="' + readmeURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a><a href="' + gitURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a><a href="' +demoURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a></div>'
+
+    console.log(buttonBar)
+    //now place buttonBar in modal window
+    //$("loaded.bs.modal").append(buttonBar);
+    //$(".portfolio-buttons").html(buttonBar);
+};
+
 //EVENT triggers
 //on page load...
 
@@ -66,4 +105,12 @@ var input = [
 $(document).on('click', '[data-toggle="lightbox"]', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox();
+});
+
+$(document).on( "click", ".portfolio-link", function() {
+    folder = $(this).attr("folder");
+    console.log(folder);
+    makeButtonBar(folder);
+    //we need this to show tool tips for newly created buttons
+    $('[data-toggle="tooltip"]').tooltip();
 });
