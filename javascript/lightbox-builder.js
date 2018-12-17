@@ -92,7 +92,6 @@ var makeButtonBar = function(folderName) {
     //had to update so it creates a string for easier use with ekko-lightbox.js
     buttonBar = '<div class="btn-group portfolio-buttons" role="group"><a href="' + readmeURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a><a href="' + gitURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a><a href="' +demoURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a></div>'
 
-    console.log(buttonBar)
     //now place buttonBar in modal window
     //$("loaded.bs.modal").append(buttonBar);
     //$(".portfolio-buttons").html(buttonBar);
@@ -105,12 +104,12 @@ var makeButtonBar = function(folderName) {
 $(document).on('click', '[data-toggle="lightbox"]', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox();
+    //we need this to show tool tips for newly created buttons
+    $('[data-toggle="tooltip"]').tooltip();
 });
 
 $(document).on( "click", ".portfolio-link", function() {
     folder = $(this).attr("folder");
     console.log(folder);
     makeButtonBar(folder);
-    //we need this to show tool tips for newly created buttons
-    $('[data-toggle="tooltip"]').tooltip();
 });

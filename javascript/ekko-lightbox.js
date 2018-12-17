@@ -4,9 +4,9 @@
  *
  * License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
  * 
- * Modifications by Jesse Howard 12/16/18
+ * Modifications by Jesse Howard 12/16/18 (see lines 109 and 110)
+ * Requires the lightbox-builder.js file
  */
-
 
 
 +function ($) {
