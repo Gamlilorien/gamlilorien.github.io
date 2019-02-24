@@ -70,7 +70,21 @@ var input = [
 var makeButtonBar = function(folderName) {
     var readmeURL = "https://github.com/Gamlilorien/" +folderName +"/blob/master/README.md";
     var gitURL = "https://github.com/Gamlilorien/" +folderName +"/";
-    var demoURL = "https://gamlilorien.github.io/" +folderName +"/";
+
+    //We need a way to conditionally trigger the demoURL as it will not allways be hosted on gitHub...
+    //FIRST, ceck if there is a demo value (ie not null)
+    if (demo) {
+        //Now evaluate if the demo value is 'git'
+        if (demo === "git") {
+            var demoURL = "https://gamlilorien.github.io/" +folderName +"/";
+        } else {
+            var demoURL = demo;
+        }
+    //otherwise if NO DEMO VALUE, default to nothing
+    } else {
+        var demoURL = "#";
+    }
+    //var demoURL = "https://gamlilorien.github.io/" +folderName +"/";
     // console.log(readmeURL +"\n" +gitURL +"\n" +demoURL)
 
     //now build button bar
