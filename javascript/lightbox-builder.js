@@ -67,23 +67,29 @@ var input = [
 
 //function to build buttonBar for portfolio items and dynamically add to modal card window
 //this function will be called by an ON CLICK event trigger
-var makeButtonBar = function(folderName) {
+var makeButtonBar = function(folderName, demo) {
     var readmeURL = "https://github.com/Gamlilorien/" +folderName +"/blob/master/README.md";
     var gitURL = "https://github.com/Gamlilorien/" +folderName +"/";
+    var demoURL = genDemoURL(demo);
 
     //We need a way to conditionally trigger the demoURL as it will not allways be hosted on gitHub...
     //FIRST, ceck if there is a demo value (ie not null)
-    if (demo) {
-        //Now evaluate if the demo value is 'git'
-        if (demo === "git") {
-            var demoURL = "https://gamlilorien.github.io/" +folderName +"/";
+    function genDemoURL(demo) {
+        if (demo) {
+            //Now evaluate if the demo value is 'git'
+            if (demo === "git") {
+                demoURL = "https://gamlilorien.github.io/" +folderName +"/";
+                return demoURL;
+            } else {
+                demoURL = demo;
+                return demoURL;
+            }
+        //otherwise if NO DEMO VALUE, default to nothing
         } else {
-            var demoURL = demo;
+            demoURL = "#";
+            return demoURL;
         }
-    //otherwise if NO DEMO VALUE, default to nothing
-    } else {
-        var demoURL = "#";
-    }
+    };
     //var demoURL = "https://gamlilorien.github.io/" +folderName +"/";
     // console.log(readmeURL +"\n" +gitURL +"\n" +demoURL)
 
@@ -104,7 +110,15 @@ var makeButtonBar = function(folderName) {
     //             $("<a>").attr({"href": demoURL, "target": "_blank", "role": "button", "class": "btn btn-dark", "data-toggle": "tooltip", "data-placement": "bottom", "title": "View Demo"}).html($("<i>").attr({"class": "fas fa-external-link-square-alt"}))
     //         );
     //had to update so it creates a string for easier use with ekko-lightbox.js
-    buttonBar = '<div class="btn-group portfolio-buttons" role="group"><a href="' + readmeURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a><a href="' + gitURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a><a href="' +demoURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a></div>'
+    //only want to include the demo button if relevent
+    if (demoURL !== "#") {
+        var viewDemo = '<a href="' +demoURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Demo"><i class="fas fa-external-link-square-alt"></i></a></div>'
+    } else {
+        //otherwise omit the button
+        var viewDemo = "";
+    }
+
+    buttonBar = '<div class="btn-group portfolio-buttons" role="group"><a href="' + readmeURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Readme"><i class="fab fa-readme"></i></a><a href="' + gitURL +'" target="_blank" role="button" class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="View Code on GitHub"><i class="fab fa-github-square"></i></a>' +viewDemo;
 
     //now place buttonBar in modal window
     //$("loaded.bs.modal").append(buttonBar);
@@ -124,6 +138,8 @@ $(document).on('click', '[data-toggle="lightbox"]', function(event) {
 
 $(document).on( "click", ".portfolio-link", function() {
     folder = $(this).attr("folder");
+    var demo = $(this).attr("demo");
     console.log(folder);
-    makeButtonBar(folder);
+    console.log(demo);
+    makeButtonBar(folder, demo);
 });
