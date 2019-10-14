@@ -29,7 +29,7 @@ function portfolioEntry(imageURL, title, footer, folder, demo) {
     )
 }
 
-var test = portfolioEntry("images/at-memory.png", "React-Tube", "footer text", "Memory-Game", "git");
+var test = portfolioEntry("images/react-tube.png", "React-Tube", "A fully functional video player using the YouTube API and REACTjs for a cleaner, and less busy UI.", "react-tube", "");
 
 
 //EVENT triggers
@@ -37,7 +37,7 @@ var test = portfolioEntry("images/at-memory.png", "React-Tube", "footer text", "
 $(document).ready(function() {
     //for copywrite year
     currentYear();
-    $(".portfolioRow").append(test);
+    $(".portfolioRow").prepend(test);
     
     //for bootstrap tooltips
     $('[data-toggle="tooltip"]').tooltip();
