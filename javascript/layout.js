@@ -31,7 +31,6 @@ function portfolioEntry(imageURL, title, footer, folder, demo) {
 
 var test = portfolioEntry("images/react-tube.png", "React-Tube", "A fully functional video player using the YouTube API and REACTjs for a cleaner, and less busy UI.", "react-tube", "");
 
-
 //EVENT triggers
 //onload of page
 $(document).ready(function() {
